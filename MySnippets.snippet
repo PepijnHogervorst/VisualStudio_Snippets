@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-    <CodeSnippet Format="1.0.0">
-        <Header>
-            <Title>Creates screen code layout</Title>
-            <Author>P. Hogervorst</Author>
-            <Description>Creates regions for methods c# (screen loading / events / etc)</Description>
-        </Header>
-        <Snippet>
-            <Code Language="CSharp">
-                <![CDATA[#region Private properties
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Creates screen code layout</Title>
+      <Author>P. Hogervorst</Author>
+      <Description>Creates regions for methods c# (screen loading / events / etc)</Description>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[#region Private properties
         #endregion
+
 
         #region Public properties
         #endregion
 
+
         #region Constructor
         #endregion
+
 
         #region Screen loading methods
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -29,6 +32,7 @@
         }
         #endregion
 
+
         #region Event handling
         private void HookEvents()
         {
@@ -41,47 +45,63 @@
         }
         #endregion
         
+        
         #region Public methods
         #endregion
         
+        
         #region Private methods
         #endregion]]>
-            </Code>
-        </Snippet>
-    </CodeSnippet>
-    <CodeSnippet Format="1.0.0">
-      <Header>
-        <Title>Class layout</Title>
-        <Author>P. Hogervorst</Author>
-        <Description>Creates regions for class 
-        (event raising, private / public prop, constructor, methods)</Description>
-      </Header>
-      <Snippet>
-        <Code Language="CSharp">
-          <![CDATA[#region Event raising
-          
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Class layout</Title>
+      <Author>P. Hogervorst</Author>
+      <Description>
+        Creates regions for class
+        (event raising, private / public prop, constructor, methods)
+      </Description>
+      <Shortcut>classlayout</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <ToolTip>Class name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[#region Event raising
         #endregion
+
 
         #region Private properties
-        
         #endregion
 
-        #region Public properties
-        
+
+        #region Public properties        
         #endregion
-        
+
+
         #region Constructor
-        
+        public $classname$ ()
+	      {
+		      $end$
+	      }
         #endregion
+        
         
         #region Public methods
-        
         #endregion
         
-        #region Private methods
         
+        #region Private methods
         #endregion]]>
-        </Code>
-      </Snippet>
-    </CodeSnippet>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
 </CodeSnippets>
