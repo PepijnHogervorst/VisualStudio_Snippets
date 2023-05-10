@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Define a Property that calles OnPropertyChanged when changed</Title>
+            <Shortcut>propchange</Shortcut>
+            <Description>Code snippet for a property using OnPropertyChanged when changed</Description>
+            <Author>P. Hogervorst</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Property Type</ToolTip>
+                    <Default>int</Default>
+                </Literal>
+                <Literal>
+                    <ID>propPrivate</ID>
+                    <ToolTip>Property Name Private Field</ToolTip>
+                    <Default>_property</Default>
+                </Literal>
+                <Literal>
+                    <ID>propPublic</ID>
+                    <ToolTip>Property Name Public Field</ToolTip>
+                    <Default>Property</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+    private $type$ $propPrivate$;
+
+    public $type$ $propPublic$
+    {
+        get => $propPrivate$;
+        set 
+        {
+            $propPrivate$ = value;
+            OnPropertyChanged(nameof($propPublic$));
+        }
+    }
+    $end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

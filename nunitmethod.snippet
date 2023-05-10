@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Create nunit test method</Title>
+            <Shortcut>nunitmethod</Shortcut>
+            <Description>Code snippet for creating a empty nunit test method</Description>
+            <Author>P. Hogervorst</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>methodName</ID>
+                    <ToolTip>Property Name Private Field</ToolTip>
+                    <Default>MyTestMethod</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[[Test]
+    public void $methodName$()
+    {
+        $end$
+    }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

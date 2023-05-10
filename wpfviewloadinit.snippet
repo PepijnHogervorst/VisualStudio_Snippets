@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Initializes the view load and unload commands</Title>
+            <Shortcut>wpfviewloadinit</Shortcut>
+            <Description>Code snippet that initializes ViewLoadCommand and ViewUnloadCommand with DelegateNoParameterCommand</Description>
+            <Author>P. Hogervorst</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="csharp">
+                <![CDATA[ViewLoadCommand = new DelegateNoParameterCommand(HandleViewLoaded);
+        ViewUnloadCommand = new DelegateNoParameterCommand(HandleViewUnloaded);]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
