@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Create xml attribute used in HMI to define meta information</Title>
+            <Shortcut>xmlattribute</Shortcut>
+            <Description>Code snippet for creating an XmlConfiguration attribute</Description>
+            <Author>P. Hogervorst</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>methodName</ID>
+                    <ToolTip>Property Name Private Field</ToolTip>
+                    <Default>MyTestMethod</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[[XmlConfiguration(Name = "$end$")]]]>
+            </Code>
+            <Imports>
+                <Import>
+                    <Namespace>ScalableHMI.Domain.Meta.Attributes</Namespace>
+                </Import>
+            </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
