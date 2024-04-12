@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Create mock field for unit test</Title>
+            <Shortcut>mockfield</Shortcut>
+            <Description>Code snippet for creating an Mock class </Description>
+            <Author>P. Hogervorst</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Property Type</ToolTip>
+                    <Default>InterfaceToMoq</Default>
+                </Literal>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>Property Name</ToolTip>
+                    <Default>InterfaceToMoq</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[private Mock<$type$> _mock$name$ = null!;$end$]]>
+            </Code>
+            <Imports>
+                <Import>
+                    <Namespace>Moq</Namespace>
+                </Import>
+            </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
